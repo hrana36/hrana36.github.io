@@ -1,0 +1,8 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^portfolio\.msmobilessolutions\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.portfolio\.msmobilessolutions\.com$
+RewriteRule ^/?$ "https\:\/\/portfolio\.msmobilessolutions\.com\/" [R=301,L]
+
